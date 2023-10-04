@@ -11,4 +11,26 @@ export const siteConfig = {
     { name: "Privacy Policy", href: "#" },
     { name: "FAQ", href: "#" },
   ],
+  nav: [
+    {name: "Acessórios", },
+    {name: "Paginas", },
+    {name: "Blog", },
+  ],
+  megaNav: [
+    {name: "Pro Gaming", link: [
+      {title:'Titulo', items: ''},
+      {title:'Titulo', items: ''},
+      {title:'Titulo', items: ''},
+    ]},
+    {name: "New Acessorio", link: [
+      {title:'Titulo', items: ''},
+      {title:'Titulo', items: ''},
+      {title:'Titulo', items: ''},
+    ]},
+    {name: "Master Game", link: [
+      {title:'Titulo', items: ''},
+      {title:'Titulo', items: ''},
+      {title:'Titulo', items: ''},
+    ]}
+  ]
 }

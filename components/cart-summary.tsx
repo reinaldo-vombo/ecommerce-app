@@ -19,6 +19,11 @@ export function CartSummary() {
       method: "POST",
       body: JSON.stringify(cartDetails)
     })
+    if (!response.ok) {
+      console.error(`HTTP error! Status: ${response.status}`);
+      setLoading(false);
+      return;
+    }
     const data = await response.json()
     const result = await redirectToCheckout(data.id)
     if (result?.error) {

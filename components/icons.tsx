@@ -2,6 +2,9 @@ import {
   LucideProps,
   Moon,
   SunMedium,
+  ChevronDown,
+  User,
+  Globe,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -10,6 +13,9 @@ export type Icon = LucideIcon
 export const Icons = {
   sun: SunMedium,
   moon: Moon,
+  arrow: ChevronDown,
+  user: User,
+  globe: Globe,
   logo: (props: LucideProps) => (
     <svg
       height="800px"

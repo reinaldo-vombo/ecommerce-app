@@ -12,6 +12,10 @@ export function MainNav() {
           {siteConfig.name}
         </span>
       </Link>
+      {siteConfig.nav.map((link) => (
+        <Link href="#" className="group">{link.name}</Link>
+      ))}
+
     </div>
   )
 }
