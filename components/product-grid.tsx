@@ -76,7 +76,7 @@ export function ProductGrid({ product }: Props) {
                 </Link>
               </div>
               <div>
-                <h2 className="text-left">size:</h2>
+                <h3 className="text-left">size:</h3>
                 <select name="" id="" className="w-full bg-transparent rounder-tl-[15px] rounded-br-[15px] p-1 border border-primary mt-2">
                   <option value="">444</option>
                   <option value="">444</option>

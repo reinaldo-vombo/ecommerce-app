@@ -2,7 +2,6 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Providers } from "@/components/providers"
 import { SiteFooter } from "@/components/site-footer"
@@ -31,13 +30,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "relative min-h-screen bg-black font-sans antialiased",
-            fontSans.variable
+            "relative min-h-screen bg-black font-sans antialiased"
           )}
         >
           <Providers>
+            <SiteHeader />
             <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
               <div className="flex-1">{children}</div>
               <SiteFooter />
             </div>

@@ -1,3 +1,5 @@
+import { post1, post2, post4, ps5controller1, ps5controller2, ps5controller3, ps5controller4, ps5controller5, user } from "@/public/assets"
+import { StaticImageData } from "next/image"
 import { Image } from "sanity"
 
 interface InventoryProduct {
@@ -13,6 +15,20 @@ interface InventoryProduct {
   description: string
   sku: string
 }
+export interface IBlogPost {
+  _id: string
+  title: string
+  image: StaticImageData
+  desc: string
+  catetegory?: string
+  author: {
+    _id: string
+    name: string
+    avatar: StaticImageData
+  }
+  slug: string
+  comment?: number
+}
 
 export interface SanityProduct extends Omit<InventoryProduct, "images"> {
   _id: string
@@ -20,6 +36,68 @@ export interface SanityProduct extends Omit<InventoryProduct, "images"> {
   slug: string
   images: Image[]
 }
+export const category = [
+  { value: "all", label: "Todos" },
+  { value: "game", label: "Jodos" },
+  { value: "sale", label: "Vendas" },
+  { value: "event", label: "Eventos" },
+]
+
+const author = {
+  _id: '12222',
+  name: 'Reinaldo Vombo',
+  avatar: user
+}
+
+export const blogPost = [
+  {
+    _id: '12345',
+    title: 'You won’t stop playing once you start.',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptate cupiditate iste quis sit, quasi ipsam eius ut consequatur est! Earum id in et facere pariatur tempore vero, dolorem odit?',
+    author: author,
+    image: post1,
+    catetegory: 'Eventos',
+    slug: '1',
+    comment: 3
+  },
+  {
+    _id: '12344',
+    title: 'PLAY THE GAME, LEARN, THRIVE, AND REPEAT.',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptate cupiditate iste quis sit, quasi ipsam eius ut consequatur est! Earum id in et facere pariatur tempore vero, dolorem odit?',
+    author: author,
+    image: post2,
+    catetegory: 'Jodos',
+    slug: '2',
+    comment: 4
+  },
+  {
+    _id: '123222',
+    title: 'FRESH STARTUP IDEAS FOR DIGITAL GAME BUSINESS',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptate cupiditate iste quis sit, quasi ipsam eius ut consequatur est! Earum id in et facere pariatur tempore vero, dolorem odit?',
+    author: author,
+    image: post4,
+    catetegory: 'Vendas',
+    slug: '3',
+    comment: 10
+  },
+]
+export const images = [
+  {
+    img: ps5controller1
+  },
+  {
+    img: ps5controller2
+  },
+  {
+    img: ps5controller3
+  },
+  {
+    img: ps5controller4
+  },
+  {
+    img: ps5controller5
+  },
+]
 
 export const inventory: InventoryProduct[] = [
   {

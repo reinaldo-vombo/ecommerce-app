@@ -8,28 +8,30 @@ import { ThemeToggle } from "./theme-toggle";
 export function NavItem() {
    const { cartCount } = useShoppingCart()
    return (
-      <div className="flex items-center justify-center">
-         <Link href='#'>
-            <Icons.user className="h-7 w-7" />
-         </Link>
-         <Button variant="ghost" size="sm">
-            <Icons.globe className="h-7 w-7" />
-         </Button>
-         <Link href="/cart">
-            <Button size="sm" variant="ghost">
-               <ShoppingBag className="h-5 w-5" />
-               <span className="ml-2 text-sm font-bold">{cartCount}</span>
-               <span className="sr-only">Cart</span>
+      <div className="hidden items-center space-x-1 md:flex">
+         <div className="flex items-center justify-center">
+            <Link href='#'>
+               <Icons.user className="h-7 w-7" />
+            </Link>
+            <Button variant="ghost" size="sm">
+               <Icons.globe className="h-7 w-7" />
             </Button>
-         </Link>
-         <ThemeToggle />
-         {process.env.NODE_ENV === 'development' && (
-            <Link href='/studio' target="_blank">
-               <Button size='sm' variant='ghost'>
-                  <Edit className='h-5 w-5' />
+            <Link href="/cart">
+               <Button size="sm" variant="ghost">
+                  <ShoppingBag className="h-5 w-5" />
+                  <span className="ml-2 text-sm font-bold">{cartCount}</span>
+                  <span className="sr-only">Cart</span>
                </Button>
             </Link>
-         )}
+            <ThemeToggle />
+            {process.env.NODE_ENV === 'development' && (
+               <Link href='/studio' target="_blank">
+                  <Button size='sm' variant='ghost'>
+                     <Edit className='h-5 w-5' />
+                  </Button>
+               </Link>
+            )}
+         </div>
       </div>
    )
 }

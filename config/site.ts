@@ -12,9 +12,9 @@ export const siteConfig = {
     { name: "FAQ", href: "#" },
   ],
   nav: [
-    {name: "Acessórios", },
-    {name: "Paginas", },
-    {name: "Blog", },
+    {name: "Acessórios", href: '#' },
+    {name: "Paginas", href: '#' },
+    {name: "Blog", href: '/blogs' },
   ],
   megaNav: [
     {name: "Pro Gaming", link: [

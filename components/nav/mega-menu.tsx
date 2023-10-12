@@ -4,9 +4,9 @@ import Link from "next/link";
 export function MegaMenu() {
    return (
       <>
-         <div className="dark:bg-white p-4 absolute">
+         <div className="absolute p-4 dark:bg-white">
             {siteConfig.megaNav.map((item, index) => (
-               <div className="flex items-center">
+               <div className="flex items-center" key={index}>
                   <h3>{item.name}</h3>
                   <ul>
                      {item.link.map((link, index) => (

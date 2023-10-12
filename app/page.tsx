@@ -13,6 +13,10 @@ import { CategorySection } from "@/components/layout/categorys"
 import { Hightlights } from "@/components/layout/best-product"
 import { SubscriberSection } from "@/components/layout/subscriber"
 import { Testimonial } from "@/components/layout/testimonial"
+import { FeatureProduct } from "@/components/layout/feature-product"
+import { BlogPosts } from "@/components/layout/blog"
+import { LateasteProduct } from "@/components/layout/lateast-product"
+import { Container } from "@/components/ui/container"
 
 interface Props {
   searchParams: {
@@ -53,33 +57,33 @@ export default async function Page({ searchParams }: Props) {
 
   return (
     <>
-      <main className="mx-auto max-w-6xl px-6">
+      <main>
         <Main />
-        <div className="flex items-center justify-between border-b border-gray-200 pb-4 pt-24 dark:border-gray-800">
+        <Container className="flex items-center justify-between border-b border-gray-200 px-3 pb-4 pt-24 dark:border-gray-800">
           <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
             0 products
           </h1>
           {/* Product Sort */}
           <ProductSort />
-        </div>
+        </Container>
 
-        <section aria-labelledby="products-heading" className="pb-24 pt-6">
+        <section aria-labelledby="products-heading" className="py-[27px] md:pb-24 md:pt-6">
           <h2 id="products-heading" className="sr-only">
             Products
           </h2>
           <div className={cn("", product.length > 0 ?
-            'lg:grid-cols-4' : 'lg:grid-cols-[1fr_3fr]')}>
+            'px-3 lg:grid-cols-4' : 'lg:grid-cols-[1fr_3fr]')}>
             <div className="hidden lg:block">
-              {/* Product filters */}
               {/* <ProductFilters /> */}
             </div>
-            {/* Product grid */}
             <ProductGrid product={product} />
           </div>
-          <CategorySection />
-          <Hightlights />
+          <CategorySection product={product} />
           <SubscriberSection />
-          <Testimonial />
+          <Hightlights />
+          <FeatureProduct />
+          <BlogPosts />
+          <LateasteProduct product={product} />
         </section>
       </main>
     </>

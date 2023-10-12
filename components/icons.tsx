@@ -5,6 +5,10 @@ import {
   ChevronDown,
   User,
   Globe,
+  Gamepad,
+  Headphones,
+  BatteryCharging,
+  Search,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -16,6 +20,10 @@ export const Icons = {
   arrow: ChevronDown,
   user: User,
   globe: Globe,
+  gameIcon: Gamepad,
+  headphones: Headphones,
+  batteryCharging: BatteryCharging,
+  search: Search,
   logo: (props: LucideProps) => (
     <svg
       height="800px"
