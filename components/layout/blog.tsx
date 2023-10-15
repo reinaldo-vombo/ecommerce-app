@@ -14,6 +14,7 @@ export function BlogPosts() {
                   _id={item._id}
                   title={item.title}
                   desc={item.desc}
+                  catetegory={item.catetegory}
                   author={item.author}
                   image={item.image}
                   slug={item.slug}

@@ -4,11 +4,17 @@ import {
   SunMedium,
   ChevronDown,
   User,
+  Eye,
+  Heart,
   Globe,
   Gamepad,
   Headphones,
   BatteryCharging,
   Search,
+  Mail,
+  Phone,
+  Pin,
+  X,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -24,6 +30,12 @@ export const Icons = {
   headphones: Headphones,
   batteryCharging: BatteryCharging,
   search: Search,
+  mail: Mail,
+  phone: Phone,
+  pin: Pin,
+  eye: Eye,
+  heart: Heart,
+  closeIcon: X,
   logo: (props: LucideProps) => (
     <svg
       height="800px"

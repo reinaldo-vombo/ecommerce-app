@@ -13,19 +13,19 @@ export const siteConfig = {
   ],
   nav: [
     {name: "Acessórios", href: '#' },
-    {name: "Paginas", href: '#' },
-    {name: "Blog", href: '/blogs' },
+    {name: "Contact", href: '/contactos' },
+    {name: "Blog", href: '/blog-post/blogs' },
   ],
   megaNav: [
     {name: "Pro Gaming", link: [
-      {title:'Titulo', items: ''},
+      {title:'Categórias', items: '/categorias'},
       {title:'Titulo', items: ''},
       {title:'Titulo', items: ''},
     ]},
-    {name: "New Acessorio", link: [
-      {title:'Titulo', items: ''},
-      {title:'Titulo', items: ''},
-      {title:'Titulo', items: ''},
+    {name: "Serviços", link: [
+      {title:'Assistência técnica', items: ''},
+      {title:'Dwonload', items: ''},
+      {title:'Montagem de Pcs', items: ''},
     ]},
     {name: "Master Game", link: [
       {title:'Titulo', items: ''},

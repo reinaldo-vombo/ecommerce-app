@@ -102,7 +102,7 @@ const BlogCard = ({ title, image, desc, author, slug, comment }: IBlogPost) => {
    return (
       <div className="mb-32 border border-[#9309FF] md:mb-5">
          <div className="h-full w-full overflow-hidden">
-            <Image src={image} width={1000} height={1000} alt="" />
+            <Image src={image} className="w-full" width={1000} height={1000} alt="" />
          </div>
          <div className="mt-6 space-y-7 p-4">
             <div className="mb-4 flex flex-col items-center justify-start gap-3 md:flex-row">

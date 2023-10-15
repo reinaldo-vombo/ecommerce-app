@@ -3,6 +3,7 @@ import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { fontSans } from "@/lib/fonts"
 import { Providers } from "@/components/providers"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
@@ -10,6 +11,8 @@ import { SiteHeader } from "@/components/site-header"
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -30,7 +33,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "relative min-h-screen bg-black font-sans antialiased"
+            "relative min-h-screen bg-white font-sans antialiased dark:bg-black ",
+            fontSans.variable
           )}
         >
           <Providers>

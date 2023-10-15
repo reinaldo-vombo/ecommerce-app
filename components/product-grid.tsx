@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
 import { urlForImage } from "@/sanity/lib/image"
@@ -11,11 +12,14 @@ import { shimmer, toBase64 } from "@/lib/image"
 import { Button } from "./ui/button"
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { CardOptions } from './card-options'
+import { ProductCard } from './product-card'
 interface Props {
   product: SanityProduct[]
 }
 
 export function ProductGrid({ product }: Props) {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   if (product.length === 0) {
     return (
       <div className="mx-auto grid h-40 w-full place-items-center rounded-md border-2 border-dashed bg-gray-50 py-10 text-center dark:bg-gray-900">
@@ -31,6 +35,7 @@ export function ProductGrid({ product }: Props) {
 
   return (
     <>
+
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -55,44 +60,22 @@ export function ProductGrid({ product }: Props) {
       >
         {product.map((product) => (
           <SwiperSlide>
-            <div className="product-card space-y-5">
-              <Link key={product._id} href={`/products/${product.slug}`}>
-                <h3 className="mb-4 font-bold">{product.name}</h3>
-              </Link>
-              <ul className="mb-3">
-                <li>TYPE: Samsung</li>
-              </ul>
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg border-gray-200 group-hover:opacity-75 dark:border-gray-800 flex justify-between">
-                <Link key={product._id} href={`/products/${product.slug}`}>
-                  <Image
-                    placeholder="blur"
-                    blurDataURL={`data:image/svg+xml:base64,${toBase64(shimmer(225, 280))}`}
-                    src={urlForImage(product.images[0]).url()}
-                    alt={product.name}
-                    width={225}
-                    height={280}
-                    className="h-full w-full object-cover object-center"
-                  />
-                </Link>
-              </div>
-              <div>
-                <h3 className="text-left">size:</h3>
-                <select name="" id="" className="w-full bg-transparent rounder-tl-[15px] rounded-br-[15px] p-1 border border-primary mt-2">
-                  <option value="">444</option>
-                  <option value="">444</option>
-                </select>
-              </div>
-              <div className="flex items-center justify-between">
-                <p className=" mt-2 w-1/2 font-bold">{formatCurrencyString({
-                  currency: product.currency,
-                  value: product.price,
-                })}</p>
-                <Button className="w-1/2 transition-colors text-white hover:bg-violet-700">Carrinho</Button>
-              </div>
-            </div>
+            <ProductCard
+              key={product._id}
+              _id={product._id}
+              slug={product.slug}
+              name={product.name}
+              price={product.price}
+              currency={product.currency}
+              images={product.images[0]}
+              image={product.image}
+              setIsModalOpen={setIsModalOpen}
+              isModalOpen={isModalOpen}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
+      {isModalOpen && <div className='absolute z-0 blur-md inset-0 bg-[#000000a8]' />}
     </>
   )
 }

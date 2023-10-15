@@ -4,10 +4,15 @@ import minItem1 from './full-bluthooth.webp'
 import minItem2 from './main-conent-games.webp'
 import Hafebluetooth from './Half-bluthooth-right.webp'
 import footerBg from './footer-bg.webp'
+import contactBg from './contact-bg1.png'
 import testimonialBg from './testimonial-bg.jpg'
 import centerBluer from './design-center-circle-5.webp'
 import topRightBluer from './design-center-circle-5.webp'
 import middleBluer from './design-circle-1.webp'
+import withBluerBotton from './white-gradient-bottom.png'
+import withBluerTop from './white-gradient-top.png'
+import withCenter from './white-center.png'
+import withTop from './white-top.png'
 import halfBluthooth from './Half-bluthooth.webp'
 import subscribeImg from './subscribe-img.webp'
 import ps5Bg from './ps5-bg.png'
@@ -18,6 +23,7 @@ import user from './97897767.jpg'
 import mobileBg from './x-box-c-bg.png'
 import fullControler from './full-controller.png'
 import blogBg from './game-charecters.png'
+
 import ps5controller1 from './ps5-1.png'
 import ps5controller2 from './ps5-2.png'
 import ps5controller3 from './ps5-3.png'
@@ -35,6 +41,9 @@ export {topRightBluer,
    productCpu,
    centerBluer,
    fullControler,
+   withCenter,
+   withTop,
+   contactBg,
    ps5Bg,
    mobileBg,
    user,
@@ -46,7 +55,9 @@ export {topRightBluer,
    ps5Controller,
    subscribeImg,
    testimonialBg,
-   middleBluer, 
+   middleBluer,
+   withBluerBotton,
+   withBluerTop,
    halfBluthooth,
    xBoxController,
    blogBg,

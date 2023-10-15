@@ -2,6 +2,7 @@ import { SanityProduct } from "@/config/inventory";
 import { Icons } from "../icons";
 import { Button } from "../ui/button";
 import { Slider } from "../ui/slider";
+import Link from "next/link";
 interface Props {
    product: SanityProduct[]
 }
@@ -27,6 +28,7 @@ export function CategorySection({ product }: Props) {
                      <Icons.batteryCharging />
                      Adaptadore
                   </Button>
+                  <Link href='/categorias' className="text-center">Mais categorias</Link>
                </div>
             </div>
             <div className="category mt-6 w-full lg:w-[67%]">

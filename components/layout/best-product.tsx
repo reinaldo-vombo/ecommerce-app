@@ -2,16 +2,18 @@
 
 import Image from "next/image"
 import { Button } from "../ui/button"
-import { middleBluer, ps5Bg, ps5Controller, topRightBluer } from "@/public/assets"
+import { middleBluer, ps5Bg, ps5Controller, topRightBluer, withCenter, withTop } from "@/public/assets"
+import { useTheme } from "next-themes"
 
 
 export function Hightlights() {
+   const { theme } = useTheme()
    return (
       <section className="relative overflow-hidden py-24">
          <Image src={ps5Bg} width={250} height={300} className="absolute bottom-0 right-0 z-10" alt="" />
          <Image src={ps5Controller} width={250} height={300} className="absolute bottom-0 left-0 hidden md:block" alt="" />
-         <Image src={topRightBluer} className="absolute right-[17%] top-0 -z-10" width={800} height={1000} alt="bluer" />
-         <Image src={middleBluer} className="absolute right-0 top-0 -z-10 " width={500} height={500} alt="bluer" />
+         <Image src={theme === 'dark' ? topRightBluer : withCenter} className="absolute right-[17%] top-0 -z-10" width={800} height={1000} alt="bluer" />
+         <Image src={theme === 'dark' ? middleBluer : withTop} className="absolute right-0 top-0 -z-10 " width={500} height={500} alt="bluer" />
          <div className="relative z-10 mx-auto mb-3 max-w-[1200px]">
             <h2 className="w-[9em] text-center leading-[1.5] lg:text-left">Best Pro <span className="text-primary">Gaming Products</span></h2>
          </div>

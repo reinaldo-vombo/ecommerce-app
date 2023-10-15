@@ -1,3 +1,5 @@
+import { SiglePost } from "@/components/layout/sigle-post"
+
 interface Props {
    params: {
       slug: string
@@ -6,8 +8,6 @@ interface Props {
 
 export default async function Page({ params }: Props) {
    return (
-      <main>
-         <h1>post</h1>
-      </main>
+      <SiglePost />
    )
 }

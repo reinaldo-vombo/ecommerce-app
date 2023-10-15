@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export function BlogCard({ title, author, image, slug }: IBlogPost) {
+export function BlogCard({ title, author, image, slug, catetegory }: IBlogPost) {
    return (
       <>
          <div className="relative w-full space-y-5 md:w-1/2 lg:w-[25%]">
@@ -20,8 +20,7 @@ export function BlogCard({ title, author, image, slug }: IBlogPost) {
                </Link>
             </div>
             <div className="absolute top-0 flex items-center justify-between w-full p-1">
-               <div className="new">hello</div>
-               <time>December 13, 2022</time>
+               <div className="new rounded-md">{catetegory}</div>
             </div>
          </div>
       </>

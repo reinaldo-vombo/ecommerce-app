@@ -1,4 +1,4 @@
-import { post1, post2, post4, ps5controller1, ps5controller2, ps5controller3, ps5controller4, ps5controller5, user } from "@/public/assets"
+import { post1, post2, post3, post4, ps5controller1, ps5controller2, ps5controller3, ps5controller4, ps5controller5, user } from "@/public/assets"
 import { StaticImageData } from "next/image"
 import { Image } from "sanity"
 
@@ -55,7 +55,7 @@ export const blogPost = [
     title: 'You won’t stop playing once you start.',
     desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptate cupiditate iste quis sit, quasi ipsam eius ut consequatur est! Earum id in et facere pariatur tempore vero, dolorem odit?',
     author: author,
-    image: post1,
+    image: post3,
     catetegory: 'Eventos',
     slug: '1',
     comment: 3
